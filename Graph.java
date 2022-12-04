@@ -1,8 +1,7 @@
 
 
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+
+import java.util.Scanner.*;
 
 // Used to signal violations of preconditions for shortest path algorithms.
 class GraphException extends RuntimeException {
