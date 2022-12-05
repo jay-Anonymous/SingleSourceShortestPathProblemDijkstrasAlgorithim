@@ -502,6 +502,56 @@ public class Graph {
 					System.out.println("  " + node);
 			}
 		}
+		/*Factor in cost
+
+		 * 
+		 * 
+		 * 
+		 *   * Perform the calculation of the total cost in min cost flow problem
+     * @return int Total cost
+     */
+
+	 
+
+    public String totalCost() {
+        String result = "";
+        int sum = 0;
+
+        for (Arc a : arcList) {
+            sum += a.flow * a.cost;
+        }
+        result = "\nTotal cost = " + sum;
+
+        return result;
+    }
+
+    /**
+     * Result of min cost flow algorithms
+     * @return String results
+     */
+    public String minCostFlowResults() {
+        if (paths.isEmpty()) {
+            return "";
+        }
+        String result = "\nFlows Paths / Cycles:\n";
+
+        for (Path p : paths) {
+            result = result.concat(p.toString());
+        }
+
+        result = result.concat("\n");
+        return result;
+	
+
+
+
+
+
+
+
+
+
+	
 	}
 
 	/**
